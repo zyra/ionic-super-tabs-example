@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>{{pageTitle}}</ion-title>
+  </ion-navbar>
+  <ion-toolbar color="dark">
+    <ion-segment color="light" [(ngModel)]="selectedTabIndex">
+      <ion-segment-button *ngFor="let tab of tabs; let i = index" [value]="i" (ionSelect)="onTabSelect(i)">
+        <ion-icon *ngIf="tab.icon" [name]="tab.icon"></ion-icon>
+        {{tab.title}}
+      </ion-segment-button>
+    </ion-segment>
+    <div class="slide" #slide [style.left]="slidePosition" [class.ease]="shouldSlideEase" [style.width]="slideWidth"></div>
+  </ion-toolbar>
+</ion-header>
+<ion-slides [style.margin-top]="headerHeight + 'px'" [style.height]="slidesHeight + 'px'" (ionSlideDrag)="onDrag($event)" (ionSlideWillChange)="onSlideWillChange()" (ionSlideDidChange)="onSlideDidChange()" [initialSlide]="selectedTabIndex">
+  <ion-slide *ngFor="let tab of tabs">
+    <ion-nav [root]="tab.tabRoot"></ion-nav>
+  </ion-slide>
+</ion-slides>
