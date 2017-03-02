@@ -50,6 +50,11 @@ export class SuperTabsComponent {
     console.log('Hello SuperTabs Component');
   }
 
+  /**
+   * We listen to drag events to move the "slide" thingy along with the slides
+   * // TODO figure out a way to reset the "slide" position after the user is done dragging. ATM it gets stuck if the user swipes partially without changing the tab.
+   * @param ev
+   */
   onDrag(ev: Slides) {
     if (ev._translate > 0) return;
     const percentage = Math.abs(ev._translate / ev._virtualSize);
@@ -64,6 +69,11 @@ export class SuperTabsComponent {
     this.slidePosition = slidePosition + 'px';
   }
 
+  /**
+   * The slide will change because the user stopped dragging, or clicked on a segment button
+   * Let's make sure the segment button is in alignment with the slides
+   * Also, lets animate the "slide" element
+   */
   onSlideWillChange() {
     if (this.slides.getActiveIndex() <= this.tabs.length) {
       this.shouldSlideEase = true;
@@ -71,10 +81,18 @@ export class SuperTabsComponent {
     }
   }
 
+  /**
+   * We need to disable animation after the slide is done changing
+   * Any further movement should happen instantly as the user swipes through the tabs
+   */
   onSlideDidChange() {
     this.shouldSlideEase = false;
   }
 
+  /**
+   * Runs when the user clicks on a segment button
+   * @param index
+   */
   onTabSelect(index: number) {
     if (index <= this.tabs.length) {
       this.slides.slideTo(index);
@@ -82,18 +100,28 @@ export class SuperTabsComponent {
   }
 
   ngAfterViewInit() {
+    // take the tabs from the query and put them in a regular array to make life easier
     this.superTabs.forEach(tab => this.tabs.push(tab));
+
+    // set page title based on the selected page
     this.pageTitle = this.tabs[this.selectedTabIndex].title;
+
+    // the width of the "slide", should be equal to the width of a single `ion-segment-button`
+    // we'll just calculate it instead of querying for a segment button
     this.slideWidth = this.platform.width() / this.tabs.length + 'px';
 
+    // we need this to make sure the "slide" thingy doesn't move outside the screen
     this.maxSlidePosition = this.platform.width() - (this.platform.width() / this.tabs.length);
 
+    // we waiting for 100ms just to give `ion-icon` some time to decide if they want to show up or not
+    // if we check height immediately, we will get the height of the header without the icons
     setTimeout(this.setHeights.bind(this), 100);
 
   }
 
-
-
+  /**
+   * Sets the height of ion-slides and it's position from the top of the page
+   */
   private setHeights() {
     this.headerHeight = this.header.getNativeElement().offsetHeight;
     this.slidesHeight = this.platform.height() - this.headerHeight;
