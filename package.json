@@ -22,7 +22,7 @@
     "@ionic/storage": "2.0.1",
     "ionic-angular": "2.1.0-201703201940",
     "ionic-native": "2.4.1",
-    "ionic2-super-tabs": "^0.1.0",
+    "ionic2-super-tabs": "^1.0.0",
     "ionicons": "3.0.0",
     "rxjs": "5.1.1",
     "sw-toolbox": "3.4.0",
