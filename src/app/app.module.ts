@@ -8,6 +8,9 @@ import {Page3Page} from "../pages/page3/page3";
 
 import { SuperTabsModule } from 'ionic2-super-tabs';
 import {PartialHomePage} from "../pages/partial-home/partial-home";
+import {PageToPushPage} from "../pages/page-to-push/page-to-push";
+
+import { BrowserModule } from '@angular/platform-browser'
 
 @NgModule({
   declarations: [
@@ -16,10 +19,12 @@ import {PartialHomePage} from "../pages/partial-home/partial-home";
     PartialHomePage,
     Page1Page,
     Page2Page,
-    Page3Page
+    Page3Page,
+    PageToPushPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
+    BrowserModule,
     SuperTabsModule
   ],
   bootstrap: [IonicApp],
@@ -29,7 +34,8 @@ import {PartialHomePage} from "../pages/partial-home/partial-home";
     PartialHomePage,
     Page1Page,
     Page2Page,
-    Page3Page
+    Page3Page,
+    PageToPushPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

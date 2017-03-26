@@ -15,8 +15,4 @@ export class Page3Page {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Page3Page');
-  }
-
 }
