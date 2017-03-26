@@ -6,18 +6,18 @@ import {Page2Page} from "../page2/page2";
 import {Page3Page} from "../page3/page3";
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-partial-home',
+  templateUrl: 'partial-home.html'
 })
-export class HomePage {
+export class PartialHomePage {
 
   page1: any = Page1Page;
   page2: any = Page2Page;
   page3: any = Page3Page;
 
-  showIcons: boolean = true;
-  showTitles: boolean = true;
-  pageTitle: string = 'Full Example';
+  showIcons: boolean;
+  showTitles: boolean;
+  pageTitle: string;
 
   constructor(public navCtrl: NavController, private navParams: NavParams) {
     this.showIcons = navParams.get('icons');

@@ -1,5 +1,15 @@
-<super-tabs>
-  <super-tab [tabRoot]="page1" title="First page" [icon]="'home'"></super-tab>
-  <super-tab [tabRoot]="page2" title="Second page" [icon]="'pin'"></super-tab>
-  <super-tab [tabRoot]="page3" title="Third page" [icon]="'heart'"></super-tab>
-</super-tabs>
+<ion-header no-shadow no-border>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ pageTitle }}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <super-tabs [rootNavCtrl]="navCtrl" height="100%" tabsColor="light" toolbarColor="dark" sliderColor="light">
+    <super-tab [tabRoot]="page1" [title]="showTitles? 'First page' : ''" [icon]="showIcons? 'home': ''"></super-tab>
+    <super-tab [tabRoot]="page2" [title]="showTitles? 'Second page' : ''" [icon]="showIcons? 'pin' : ''"></super-tab>
+    <super-tab [tabRoot]="page3" [title]="showTitles? 'Third page' : ''" [icon]="showIcons? 'heart' : ''"></super-tab>
+  </super-tabs>
+</ion-content>

@@ -7,11 +7,13 @@ import {Page2Page} from "../pages/page2/page2";
 import {Page3Page} from "../pages/page3/page3";
 
 import { SuperTabsModule } from 'ionic2-super-tabs';
+import {PartialHomePage} from "../pages/partial-home/partial-home";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+    PartialHomePage,
     Page1Page,
     Page2Page,
     Page3Page
@@ -19,12 +21,12 @@ import { SuperTabsModule } from 'ionic2-super-tabs';
   imports: [
     IonicModule.forRoot(MyApp),
     SuperTabsModule
-
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
+    PartialHomePage,
     Page1Page,
     Page2Page,
     Page3Page

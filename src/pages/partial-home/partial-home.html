@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ pageTitle }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-grid no-padding style="height: 100%">
+    <ion-row text-uppercase text-center style="height: 300px; background: linear-gradient(#c1c1c1, rgb(210, 210, 210));font-size: 20px;" align-items-center>
+      <ion-col>
+        <h2>Some content goes here</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row style="height: 100%;">
+      <ion-col>
+        <super-tabs [rootNavCtrl]="navCtrl" height="100%">
+          <super-tab [tabRoot]="page1" [title]="showTitles? 'First page' : ''" [icon]="showIcons? 'home': ''"></super-tab>
+          <super-tab [tabRoot]="page2" [title]="showTitles? 'Second page' : ''" [icon]="showIcons? 'pin' : ''"></super-tab>
+          <super-tab [tabRoot]="page3" [title]="showTitles? 'Third page' : ''" [icon]="showIcons? 'heart' : ''"></super-tab>
+        </super-tabs>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
