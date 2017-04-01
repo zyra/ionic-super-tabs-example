@@ -5,7 +5,6 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 import { HomePage } from '../pages/home/home';
 import {PartialHomePage} from "../pages/partial-home/partial-home";
 
-
 @Component({
   templateUrl: 'app.html'
 })

@@ -7,7 +7,7 @@
   </ion-navbar>
 </ion-header>
 <ion-content>
-  <super-tabs [rootNavCtrl]="navCtrl" height="100%" tabsColor="light" toolbarColor="dark" sliderColor="light">
+  <super-tabs [rootNavCtrl]="navCtrl" [selectedTabIndex]="1"  height="100%" tabsColor="light" toolbarColor="dark" sliderColor="light">
     <super-tab [tabRoot]="page1" [title]="showTitles? 'First page' : ''" [icon]="showIcons? 'home': ''"></super-tab>
     <super-tab [tabRoot]="page2" [title]="showTitles? 'Second page' : ''" [icon]="showIcons? 'pin' : ''"></super-tab>
     <super-tab [tabRoot]="page3" [title]="showTitles? 'Third page' : ''" [icon]="showIcons? 'heart' : ''"></super-tab>
