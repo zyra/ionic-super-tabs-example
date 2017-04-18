@@ -14,8 +14,12 @@ export class Page1Page {
     this.rootNavCtrl = navParams.get('rootNavCtrl');
   }
 
-  pushPage() {
-    this.rootNavCtrl.push(PageToPushPage);
+  pushPage(localNavCtrl: boolean = false) {
+    if (localNavCtrl) {
+      this.navCtrl.push(PageToPushPage);
+    } else {
+      this.rootNavCtrl.push(PageToPushPage);
+    }
   }
 
 }

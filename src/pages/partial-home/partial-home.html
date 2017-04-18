@@ -18,10 +18,10 @@
     </ion-row>
     <ion-row style="height: 100%;">
       <ion-col>
-        <super-tabs [rootNavCtrl]="navCtrl" height="100%">
-          <super-tab [tabRoot]="page1" [title]="showTitles? 'First page' : ''" [icon]="showIcons? 'home': ''"></super-tab>
-          <super-tab [tabRoot]="page2" [title]="showTitles? 'Second page' : ''" [icon]="showIcons? 'pin' : ''"></super-tab>
-          <super-tab [tabRoot]="page3" [title]="showTitles? 'Third page' : ''" [icon]="showIcons? 'heart' : ''"></super-tab>
+        <super-tabs>
+          <super-tab [root]="page1" [title]="showTitles? 'First page' : ''" [icon]="showIcons? 'home': ''"></super-tab>
+          <super-tab [root]="page2" [title]="showTitles? 'Second page' : ''" [icon]="showIcons? 'pin' : ''"></super-tab>
+          <super-tab [root]="page3" [title]="showTitles? 'Third page' : ''" [icon]="showIcons? 'heart' : ''"></super-tab>
         </super-tabs>
       </ion-col>
     </ion-row>

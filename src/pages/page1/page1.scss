@@ -1,5 +1,30 @@
 page-page1 {
 
+  ion-slides {
+    height: 80px;
 
+    ion-slide span.color {
+
+      display: block;
+      height: 50px;
+      width: 50px;
+
+      max-width: 100%;
+      border-radius: 500rem;
+
+      &.blue {
+        background: blue;
+      }
+
+      &.red {
+        background: red;
+      }
+
+      &.yellow {
+        background: yellow;
+      }
+
+    }
+  }
 
 }

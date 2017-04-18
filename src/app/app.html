@@ -1,8 +1,10 @@
-<ion-menu [content]="content">
-  <ion-content>
-    <ion-list>
-      <button ion-item menuClose *ngFor="let item of menuItems" (click)="openPage(item)">{{ item.name }}</button>
-    </ion-list>
-  </ion-content>
-</ion-menu>
-<ion-nav [root]="rootPage" [rootParams]="rootParams" #content></ion-nav>
+<ion-split-pane>
+  <ion-menu [content]="content">
+    <ion-content>
+      <ion-list>
+        <button ion-item menuClose *ngFor="let item of menuItems" (click)="openPage(item)">{{ item.name }}</button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-nav [root]="rootPage" [rootParams]="rootParams" main #content></ion-nav>
+</ion-split-pane>
