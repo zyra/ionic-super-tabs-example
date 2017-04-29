@@ -10,21 +10,13 @@
 
 <ion-content>
 
-  <ion-grid no-padding style="height: 100%">
-    <ion-row text-uppercase text-center style="height: 300px; background: linear-gradient(#c1c1c1, rgb(210, 210, 210));font-size: 20px;" align-items-center>
-      <ion-col>
-        <h2>Some content goes here</h2>
-      </ion-col>
+    <ion-row text-uppercase text-center style="height: 20%; background: linear-gradient(#c1c1c1, rgb(210, 210, 210));font-size: 20px;">
+      <h2>Some content goes here</h2>
     </ion-row>
-    <ion-row style="height: 100%;">
-      <ion-col>
-        <super-tabs>
-          <super-tab [root]="page1" [title]="showTitles? 'First page' : ''" [icon]="showIcons? 'home': ''"></super-tab>
-          <super-tab [root]="page2" [title]="showTitles? 'Second page' : ''" [icon]="showIcons? 'pin' : ''"></super-tab>
-          <super-tab [root]="page3" [title]="showTitles? 'Third page' : ''" [icon]="showIcons? 'heart' : ''"></super-tab>
-        </super-tabs>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+    <super-tabs style="height: 80%">
+      <super-tab [root]="page1" [title]="showTitles? 'First page' : ''" [icon]="showIcons? 'home': ''"></super-tab>
+      <super-tab [root]="page2" [title]="showTitles? 'Second page' : ''" [icon]="showIcons? 'pin' : ''"></super-tab>
+      <super-tab [root]="page3" [title]="showTitles? 'Third page' : ''" [icon]="showIcons? 'heart' : ''"></super-tab>
+    </super-tabs>
 
 </ion-content>
