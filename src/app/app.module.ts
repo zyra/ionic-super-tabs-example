@@ -6,7 +6,8 @@ import {Page1Page} from "../pages/page1/page1";
 import {Page2Page} from "../pages/page2/page2";
 import {Page3Page} from "../pages/page3/page3";
 
-import { SuperTabsModule } from 'ionic2-super-tabs';
+// import { SuperTabsModule, SuperTabsController } from 'ionic2-super-tabs';
+import { SuperTabsModule } from '../super-tabs';
 import {PartialHomePage} from "../pages/partial-home/partial-home";
 import {PageToPushPage} from "../pages/page-to-push/page-to-push";
 
