@@ -1,11 +1,11 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 import { NavController, NavParams} from 'ionic-angular';
-import {Page1Page} from "../page1/page1";
-import {Page2Page} from "../page2/page2";
-import {Page3Page} from "../page3/page3";
+import { Page1Page } from "../page1/page1";
+import { Page2Page } from "../page2/page2";
+import { Page3Page } from "../page3/page3";
 // import {SuperTabsController} from "ionic2-super-tabs";
-import {SuperTabsController} from "../../super-tabs";
+import { SuperTabsController } from 'ionic2-super-tabs';
 
 @Component({
   selector: 'page-home',

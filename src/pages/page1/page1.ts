@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {PageToPushPage} from "../page-to-push/page-to-push";
+import { PageToPushPage } from "../page-to-push/page-to-push";
 
 @Component({
   selector: 'page-page1',

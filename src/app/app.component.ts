@@ -1,9 +1,11 @@
 import {Component, ViewChild} from '@angular/core';
-import {Nav, Platform} from 'ionic-angular';
-import { StatusBar, Splashscreen } from 'ionic-native';
+import { Nav, Platform } from 'ionic-angular';
 
 import { HomePage } from '../pages/home/home';
-import {PartialHomePage} from "../pages/partial-home/partial-home";
+import { PartialHomePage } from "../pages/partial-home/partial-home";
+
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
 
 @Component({
   templateUrl: 'app.html'
@@ -48,16 +50,12 @@ export class MyApp {
     }
   ];
 
-  constructor(platform: Platform) {
+  constructor(platform: Platform, splashScreen: SplashScreen, statusBar: StatusBar) {
     this.rootPage = this.menuItems[0].page;
     this.rootParams = this.menuItems[0].params;
     platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      // StatusBar.styleDefault();
-      // Splashscreen.hide();
-      Splashscreen.hide();
-      StatusBar.backgroundColorByHexString('#3949AB')
+      splashScreen.hide();
+      statusBar.backgroundColorByHexString('#3949AB')
     });
   }
 
