@@ -20,32 +20,32 @@ export class MyApp {
   menuItems: any[] = [
     {
       name: 'Full page',
-      page: HomePage,
+      page: 'HomePage',
       params: { icons: true, titles: true, pageTitle: 'Full page' }
     },
     {
       name: 'Full - Title only',
-      page: HomePage,
+      page: 'HomePage',
       params: { icons: false, titles: true }
     },
     {
       name: 'Full - Icons only',
-      page: HomePage,
+      page: 'HomePage',
       params: { icons: true, titles: false }
     },
     {
       name: 'Partial nav',
-      page: PartialHomePage,
+      page: 'PartialHomePage',
       params: { icons: true, titles: true }
     },
     {
       name: 'Partial - Title only',
-      page: PartialHomePage,
+      page: 'PartialHomePage',
       params: { icons: false, titles: true }
     },
     {
       name: 'Partial - Icons only',
-      page: PartialHomePage,
+      page: 'PartialHomePage',
       params: { icons: true, titles: false }
     }
   ];
