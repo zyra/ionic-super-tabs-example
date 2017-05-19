@@ -19,34 +19,34 @@ export class MyApp {
 
   menuItems: any[] = [
     {
-      name: 'Full page',
+      name: 'Full Height',
       page: 'HomePage',
-      params: { icons: true, titles: true, pageTitle: 'Full page' }
+      params: { type: 'all' }
     },
     {
-      name: 'Full - Title only',
+      name: 'Full Height - Title only',
       page: 'HomePage',
-      params: { icons: false, titles: true }
+      params: { type: 'titles-only' }
     },
     {
-      name: 'Full - Icons only',
+      name: 'Full height - Icons only',
       page: 'HomePage',
-      params: { icons: true, titles: false }
+      params: { type: 'icons-only' }
     },
     {
-      name: 'Partial nav',
+      name: 'Partial Height',
       page: 'PartialHomePage',
-      params: { icons: true, titles: true }
+      params: { type: 'all' }
     },
     {
-      name: 'Partial - Title only',
+      name: 'Partial Height - Title only',
       page: 'PartialHomePage',
-      params: { icons: false, titles: true }
+      params: { type: 'titles-only' }
     },
     {
-      name: 'Partial - Icons only',
+      name: 'Partial Height - Icons only',
       page: 'PartialHomePage',
-      params: { icons: true, titles: false }
+      params: { type: 'icons-only' }
     }
   ];
 
@@ -60,7 +60,6 @@ export class MyApp {
   }
 
   openPage(page) {
-    page.params.pageTitle = page.name;
     this.nav.setRoot(page.page, page.params);
   }
 

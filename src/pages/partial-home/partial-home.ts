@@ -2,7 +2,9 @@ import {Component} from '@angular/core';
 
 import { NavController, NavParams, IonicPage} from 'ionic-angular';
 
-@IonicPage()
+@IonicPage({
+  segment: 'partial-home/:type'
+})
 @Component({
   selector: 'page-partial-home',
   templateUrl: 'partial-home.html'
@@ -13,14 +15,23 @@ export class PartialHomePage {
   page2: any = 'Page2Page';
   page3: any = 'Page3Page';
 
-  showIcons: boolean;
-  showTitles: boolean;
-  pageTitle: string;
+  showIcons: boolean = true;
+  showTitles: boolean = true;
+  pageTitle: string = 'Partial Home';
 
   constructor(public navCtrl: NavController, private navParams: NavParams) {
-    this.showIcons = navParams.get('icons');
-    this.showTitles = navParams.get('titles');
-    this.pageTitle = navParams.get('pageTitle');
+    const type = navParams.get('type');
+    switch (type) {
+      case 'icons-only':
+        this.showTitles = false;
+        this.pageTitle += ' - Icons only';
+        break;
+
+      case 'titles-only':
+        this.showIcons = false;
+        this.pageTitle += ' - Titles only';
+        break;
+    }
   }
 
 }
