@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
 // import {SuperTabsController} from "ionic2-super-tabs";
-import { SuperTabsController } from '../../super-tabs/src';
+import { SuperTabsController } from '../../ionic2-super-tabs/src';
 
 @IonicPage()
 @Component({
