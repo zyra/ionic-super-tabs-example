@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
 // import {SuperTabsController} from "ionic2-super-tabs";
 import { SuperTabsController } from '../../ionic2-super-tabs/src';
+import {SuperTabs} from "../../ionic2-super-tabs/src/components/super-tabs";
 
 @IonicPage({
   segment: 'home/:type'
@@ -12,6 +13,8 @@ import { SuperTabsController } from '../../ionic2-super-tabs/src';
   templateUrl: 'home.html'
 })
 export class HomePage {
+
+  @ViewChild(SuperTabs) superTabs: SuperTabs;
 
   page1: any = 'Page1Page';
   page2: any = 'Page2Page';
@@ -40,6 +43,11 @@ export class HomePage {
     // this.superTabsCtrl.increaseBadge('page1', 10);
     // this.superTabsCtrl.enableTabSwipe('page3', false);
     // this.superTabsCtrl.enableTabsSwipe(false);
+
+    // Test issue #122
+    // setTimeout(() => {
+    //   this.superTabs.slideTo(4);
+    // }, 2000);
   }
 
   onTabSelect(tab: { index: number; id: string; }) {
