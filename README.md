@@ -2,10 +2,8 @@ This is a demo project demonstrating the usage of [ionic2-super-tabs module](htt
 
 To use this project:
 ```shell
-git clone https://github.com/zyra/ionic2-super-tabs-example
+git clone https://github.com/RaphaelBadia/ionic2-super-tabs-example
 cd ionic2-super-tabs-example
-git submodule init
-git submodule update
 npm i
 ionic serve
 ```
