@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, IonicPage } from 'ionic-angular';
+import {NavController, NavParams, IonicPage, LoadingController} from 'ionic-angular';
 import { PageToPushPage } from "../page-to-push/page-to-push";
 
 @IonicPage()
@@ -11,7 +11,7 @@ export class Page1Page {
 
   rootNavCtrl: NavController;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private loadingCtrl: LoadingController) {
     this.rootNavCtrl = navParams.get('rootNavCtrl');
   }
 
@@ -29,6 +29,13 @@ export class Page1Page {
     } else {
       this.rootNavCtrl.push('PageToPushPage');
     }
+  }
+
+  showLoading() {
+    this.loadingCtrl.create({
+      duration: 1500,
+      content: 'Loading ...'
+    }).present();
   }
 
 }
