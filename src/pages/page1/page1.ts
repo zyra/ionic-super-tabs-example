@@ -15,6 +15,14 @@ export class Page1Page {
     this.rootNavCtrl = navParams.get('rootNavCtrl');
   }
 
+  ionViewDidLoad() {
+    console.log('[1] did load fired');
+  }
+
+  ionViewDidEnter() {
+    console.log('[1] did enter fired');
+  }
+
   pushPage(localNavCtrl: boolean = false) {
     if (localNavCtrl) {
       this.navCtrl.push('PageToPushPage');
