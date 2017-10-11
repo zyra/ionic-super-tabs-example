@@ -15,8 +15,16 @@ export class Page1Page {
     this.rootNavCtrl = navParams.get('rootNavCtrl');
   }
 
+  ionViewWillLoad() {
+    console.log('[1] will load fired');
+  }
+
   ionViewDidLoad() {
     console.log('[1] did load fired');
+  }
+
+  ionViewWillEnter() {
+    console.log('[1] will enter fired');
   }
 
   ionViewDidEnter() {

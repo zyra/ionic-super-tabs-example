@@ -10,9 +10,16 @@ export class Page2Page {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) { }
 
+  ionViewWillLoad() {
+    console.log('[2] will load fired');
+  }
 
   ionViewDidLoad() {
     console.log('[2] did load fired');
+  }
+
+  ionViewWillEnter() {
+    console.log('[2] will enter fired');
   }
 
   ionViewDidEnter() {
