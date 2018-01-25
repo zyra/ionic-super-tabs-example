@@ -47,6 +47,10 @@ export class MyApp {
       name: 'Partial Height - Icons only',
       page: 'PartialHomePage',
       params: { type: 'icons-only' }
+    },
+    {
+      name: 'Ionic tabs',
+      page: 'IonicTabsPage'
     }
   ];
 
