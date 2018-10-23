@@ -1,20 +1,20 @@
-import {Component, ViewChild} from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
-import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 // import {SuperTabsController} from "ionic2-super-tabs";
 import { SuperTabsController } from '../../ionic2-super-tabs/src';
-import {SuperTabs} from "../../ionic2-super-tabs/src/components/super-tabs";
+import { SuperTabsComponent } from '../../ionic2-super-tabs/src/components/super-tabs';
 
 @IonicPage({
-  segment: 'home/:type'
+  segment: 'home/:type',
 })
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
 })
 export class HomePage {
 
-  @ViewChild(SuperTabs) superTabs: SuperTabs;
+  @ViewChild(SuperTabsComponent) superTabs: SuperTabsComponent;
 
   page1: any = 'Page1Page';
   page2: any = 'Page2Page';
