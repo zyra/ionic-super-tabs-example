@@ -1,24 +1,34 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header no-border>
+  <ion-toolbar color="primary">
     <ion-title>
-      Ionic Blank
+      Example 1
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
   <super-tabs>
     <super-tabs-toolbar>
       <super-tab-button>
-        <ion-label>Home</ion-label>
+        <ion-icon name="list"></ion-icon>
+        <ion-label>Feed</ion-label>
       </super-tab-button>
       <super-tab-button>
-        <ion-label>Home</ion-label>
+        <ion-icon name="person"></ion-icon>
+        <ion-label>Profile</ion-label>
+      </super-tab-button>
+      <super-tab-button>
+        <ion-icon name="contacts"></ion-icon>
+        <ion-label>Contacts</ion-label>
       </super-tab-button>
     </super-tabs-toolbar>
     <super-tabs-container>
       <super-tab>This is home 1</super-tab>
-      <super-tab>This is home 2</super-tab>
+      <super-tab>
+        <ion-nav [root]="profilePage"></ion-nav>
+      </super-tab>
+      <super-tab>
+        <ion-nav [root]="contactsPage"></ion-nav>
+      </super-tab>
     </super-tabs-container>
   </super-tabs>
 </ion-content>

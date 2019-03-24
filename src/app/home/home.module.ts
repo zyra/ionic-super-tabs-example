@@ -4,6 +4,8 @@ import { SuperTabsModule } from '@ionic-super-tabs/angular';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { ContactsPageModule } from '../contacts/contacts.module';
+import { ProfilePageModule } from '../profile/profile.module';
 
 import { HomePage } from './home.page';
 
@@ -18,7 +20,9 @@ import { HomePage } from './home.page';
         component: HomePage
       }
     ]),
-    SuperTabsModule
+    SuperTabsModule,
+    ContactsPageModule,
+    ProfilePageModule,
   ],
   declarations: [HomePage]
 })

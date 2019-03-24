@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ContactsPage } from '../contacts/contacts.page';
+import { ProfilePage } from '../profile/profile.page';
 
 @Component({
   selector: 'app-home',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  contactsPage = ContactsPage;
+  profilePage = ProfilePage;
 }
