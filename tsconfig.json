@@ -21,6 +21,6 @@
   },
   "include": [
     "src",
-    "node_modules/@ionic-super-tabs/core/dist/types/components.d.ts"
+    "node_modules/@ionic-super-tabs/core/dist/types/interface.d.ts"
   ]
 }

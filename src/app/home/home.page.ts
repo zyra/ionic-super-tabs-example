@@ -8,7 +8,6 @@ import { ProfilePage } from '../profile/profile.page';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
   contactsPage = ContactsPage;
   profilePage = ProfilePage;
 }
