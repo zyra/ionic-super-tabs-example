@@ -1,5 +1,7 @@
 {
   "name": "ionic-super-tabs-example",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
