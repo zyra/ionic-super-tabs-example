@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { SuperTabs } from '@ionic-super-tabs/angular';
 import { ContactsPage } from '../contacts/contacts.page';
 import { ProfilePage } from '../profile/profile.page';
@@ -10,7 +10,7 @@ import { ProfilePage } from '../profile/profile.page';
 })
 export class HomePage implements AfterViewInit {
 
-  @ViewChild(SuperTabs) superTabs: SuperTabs;
+  @ViewChild(SuperTabs, { static: false }) superTabs: SuperTabs;
 
   contactsPage = ContactsPage;
   profilePage = ProfilePage;
