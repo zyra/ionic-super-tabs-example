@@ -2,9 +2,6 @@
 kind: pipeline
 type: docker
 name: default
-trigger:
-  event:
-  - push
 
 steps:
 - name: Install node modules
@@ -16,8 +13,21 @@ steps:
   image: node:12-alpine
   commands:
   - npx ng build --prod
+
+- name: Publish
+  image: plugins/gh-pages
+  when:
+    branch:
+    - master
+  settings:
+    username:
+      from_secret: gh_user
+    password:
+      from_secret: gh_token
+    pages_directory: www
+
 ---
 kind: signature
-hmac: 94539839f8658cee5773a82c6f59f1f5e5c0f4e8c0099fb90eb6e6ebb9413e11
+hmac: 85f501a4ee1ff652f8aeef99bc89ca35d0536f67b4b01ffef9f94ff18a3dec14
 
 ...
