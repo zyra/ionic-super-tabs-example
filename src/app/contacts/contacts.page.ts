@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IonRefresher } from '@ionic/angular';
 
 @Component({
   selector: 'app-contacts',
@@ -19,6 +20,10 @@ export class ContactsPage implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  onRefresh(ev: any) {
+    setTimeout(() => ev.detail.complete(), 1000);
   }
 
 }

@@ -1,29 +1,32 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SuperTabsModule } from '@ionic-super-tabs/angular';
-import { IonicModule } from '@ionic/angular';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { SuperTabsModule } from '@ionic-super-tabs/angular';
+import { IonicModule } from '@ionic/angular';
 import { ContactsPageModule } from '../contacts/contacts.module';
 import { ProfilePageModule } from '../profile/profile.module';
 
-import { HomePage } from './home.page';
+import { HomePage, PreferencesPopover } from './home.page';
+
 
 @NgModule({
   imports: [
     CommonModule,
+    SuperTabsModule,
     FormsModule,
     IonicModule,
     RouterModule.forChild([
       {
         path: '',
-        component: HomePage
-      }
+        component: HomePage,
+      },
     ]),
-    SuperTabsModule,
     ContactsPageModule,
     ProfilePageModule,
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, PreferencesPopover],
+  entryComponents: [PreferencesPopover],
 })
-export class HomePageModule {}
+export class HomePageModule {
+}

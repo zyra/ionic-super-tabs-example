@@ -1,14 +1,23 @@
 <ion-content>
 
+  <ion-refresher slot="fixed" (ionRefresh)="onRefresh($event)">
+    <ion-refresher-content>
+
+    </ion-refresher-content>
+  </ion-refresher>
+
+
   <ion-list>
-    <ion-item *ngFor="let contact of contacts" button>
-      <ion-icon name="contact" slot="start">
-      </ion-icon>
-      <ion-label>
-        <h2>{{ contact.name }}</h2>
-        <p>{{ contact.phoneNumber }}</p>
-      </ion-label>
-    </ion-item>
+    <ion-virtual-scroll [items]="contacts" [approxItemHeight]="67">
+      <ion-item *virtualItem="let contact" button>
+        <ion-icon name="contact" slot="start">
+        </ion-icon>
+        <ion-label>
+          <h2>{{ contact.name }}</h2>
+          <p>{{ contact.phoneNumber }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-virtual-scroll>
   </ion-list>
 
 </ion-content>

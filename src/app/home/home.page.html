@@ -1,26 +1,32 @@
-<ion-header no-border>
+<ion-header class="ion-no-border" no-border>
   <ion-toolbar color="primary">
     <ion-title>
       Example 1
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="showPreferences($event)">
+        <ion-icon name="settings" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+<ion-content no-bounce class="ion-no-bounce">
   <super-tabs>
-    <super-tabs-toolbar slot="top">
+    <super-tabs-toolbar [slot]="opts.toolbarPos" [scrollable]="opts.scrollable">
       <super-tab-button>
-        <ion-icon name="list"></ion-icon>
-        <ion-label>Feed</ion-label>
+        <ion-icon name="list" *ngIf="opts.icon"></ion-icon>
+        <ion-label *ngIf="opts.label">Feed</ion-label>
       </super-tab-button>
       <super-tab-button>
-        <ion-icon name="person"></ion-icon>
-        <ion-label>Profile</ion-label>
+        <ion-icon name="person" *ngIf="opts.icon"></ion-icon>
+        <ion-label *ngIf="opts.label">Profile</ion-label>
       </super-tab-button>
       <super-tab-button>
-        <ion-icon name="contacts"></ion-icon>
-        <ion-label>Contacts</ion-label>
+        <ion-icon name="contacts" *ngIf="opts.icon"></ion-icon>
+        <ion-label *ngIf="opts.label">Contacts</ion-label>
       </super-tab-button>
     </super-tabs-toolbar>
+
     <super-tabs-container>
       <super-tab>This is home 1</super-tab>
       <super-tab>
