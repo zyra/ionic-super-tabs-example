@@ -13,6 +13,7 @@ steps:
   image: node:12-alpine
   commands:
   - npx ng build --prod --deploy-url=https://zyra.github.io/ionic-super-tabs-example/
+  - sed -i 's/base href="\/"/base href="\/ionic-super-tabs-example\/"/' www/index.html
 
 - name: Publish
   image: plugins/gh-pages
@@ -28,6 +29,6 @@ steps:
 
 ---
 kind: signature
-hmac: f4d8bef8a5b739fef2e060cce7eb26013cfc0c731aa83485d30f3252048b0718
+hmac: d1c4dc701c2db7950b6d3a43c92d0e5e11b392f6aa73c4f5fa91236774801b5a
 
 ...
