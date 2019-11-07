@@ -12,7 +12,7 @@ steps:
 - name: Build
   image: node:12-alpine
   commands:
-  - npx ng build --prod
+  - npx ng build --prod --deploy-url=https://zyra.github.io/ionic-super-tabs-example/
 
 - name: Publish
   image: plugins/gh-pages
@@ -28,6 +28,6 @@ steps:
 
 ---
 kind: signature
-hmac: 85f501a4ee1ff652f8aeef99bc89ca35d0536f67b4b01ffef9f94ff18a3dec14
+hmac: f4d8bef8a5b739fef2e060cce7eb26013cfc0c731aa83485d30f3252048b0718
 
 ...
