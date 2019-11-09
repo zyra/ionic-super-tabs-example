@@ -9,3 +9,13 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+ion-card, ion-card-content {
+
+}
+
+
+ion-card.md {
+  box-shadow: 0 2px 9px 3px rgba(75, 75, 158, 0);
+  border: 1px solid rgba(75, 75, 158, 0.07);
+}

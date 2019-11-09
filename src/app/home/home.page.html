@@ -1,60 +1,40 @@
 <ion-header class="ion-no-border" no-border>
-  <ion-toolbar color="primary">
-    <ion-title>
-      Example 1
-    </ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="showPreferences($event)">
-        <ion-icon name="settings" slot="icon-only"></ion-icon>
-      </ion-button>
+  <ion-toolbar color="primary" mode="ios">
+    <ion-buttons slot="start">
+      <ion-menu-button color="tertiary" autoHide="false"></ion-menu-button>
     </ion-buttons>
+    <ion-title color="secondary">
+      Super Tabs
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 <super-tabs activeTabIndex="1">
-  <super-tabs-toolbar slot="top" scrollable [scrollablePadding]="false">
+  <super-tabs-toolbar slot="top">
     <super-tab-button>
-      <ion-icon name="list"></ion-icon>
-      <ion-label>P</ion-label>
-    </super-tab-button>
-    <super-tab-button>
-      <ion-icon name="list"></ion-icon>
-      <ion-label>Page 2</ion-label>
-    </super-tab-button>
-    <super-tab-button>
-      <ion-icon name="list"></ion-icon>
-      <ion-label>3</ion-label>
-    </super-tab-button>
-    <super-tab-button>
-      <ion-icon name="person"></ion-icon>
-      <ion-label>My Profile</ion-label>
+      <ion-icon name="star"></ion-icon>
+      <ion-label>Favourites</ion-label>
     </super-tab-button>
     <super-tab-button>
       <ion-icon name="contacts"></ion-icon>
       <ion-label>Contacts</ion-label>
     </super-tab-button>
+    <super-tab-button>
+      <ion-icon name="person"></ion-icon>
+      <ion-label>Profile</ion-label>
+    </super-tab-button>
   </super-tabs-toolbar>
 
   <super-tabs-container>
     <super-tab>
-      <ion-content>
+      <ion-content class="ion-padding">
         This is home 1
       </ion-content>
     </super-tab>
     <super-tab>
-      <ion-content>
-        This is home 2
-      </ion-content>
-    </super-tab>
-    <super-tab>
-      <ion-content>
-        This is home 3
-      </ion-content>
+      <ion-nav [root]="contactsPage"></ion-nav>
     </super-tab>
     <super-tab>
       <ion-nav [root]="profilePage"></ion-nav>
-    </super-tab>
-    <super-tab>
-      <ion-nav [root]="contactsPage"></ion-nav>
     </super-tab>
   </super-tabs-container>
 </super-tabs>
