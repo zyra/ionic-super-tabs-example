@@ -1,8 +1,7 @@
-import { AfterViewInit, ChangeDetectorRef, Component, Input, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Input, ViewChild } from '@angular/core';
 import { SuperTabs } from '@ionic-super-tabs/angular';
+import { SuperTabsConfig } from '@ionic-super-tabs/core';
 import { PopoverController } from '@ionic/angular';
-import { BehaviorSubject, defer, from } from 'rxjs';
-import { filter, takeUntil } from 'rxjs/operators';
 import { ContactsPage } from '../contacts/contacts.page';
 import { ProfilePage } from '../profile/profile.page';
 
@@ -53,18 +52,23 @@ export class HomePage implements AfterViewInit {
   contactsPage = ContactsPage;
   profilePage = ProfilePage;
   opts = {
-    icon: true,
+    icon: false,
     label: true,
     toolbarPos: 'top',
-    scrollable: false,
+    scrollable: true,
   };
 
-  constructor(private popoverCtrl: PopoverController, private cdr: ChangeDetectorRef) {
+  config: SuperTabsConfig = {
+    debug: true,
+    allowElementScroll: false,
+  };
+
+  constructor(private popoverCtrl: PopoverController) {
   }
 
   ngAfterViewInit() {
     console.log('Super tabs is ', this.superTabs);
-    this.superTabs.selectTab(1);
+    // this.superTabs.selectTab(1);
   }
 
   async showPreferences(event: any) {

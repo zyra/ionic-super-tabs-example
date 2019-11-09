@@ -10,31 +10,51 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-<ion-content no-bounce class="ion-no-bounce">
-  <super-tabs>
-    <super-tabs-toolbar [slot]="opts.toolbarPos" [scrollable]="opts.scrollable">
-      <super-tab-button>
-        <ion-icon name="list" *ngIf="opts.icon"></ion-icon>
-        <ion-label *ngIf="opts.label">Feed</ion-label>
-      </super-tab-button>
-      <super-tab-button>
-        <ion-icon name="person" *ngIf="opts.icon"></ion-icon>
-        <ion-label *ngIf="opts.label">Profile</ion-label>
-      </super-tab-button>
-      <super-tab-button>
-        <ion-icon name="contacts" *ngIf="opts.icon"></ion-icon>
-        <ion-label *ngIf="opts.label">Contacts</ion-label>
-      </super-tab-button>
-    </super-tabs-toolbar>
+<super-tabs activeTabIndex="1">
+  <super-tabs-toolbar slot="top" scrollable [scrollablePadding]="false">
+    <super-tab-button>
+      <ion-icon name="list"></ion-icon>
+      <ion-label>P</ion-label>
+    </super-tab-button>
+    <super-tab-button>
+      <ion-icon name="list"></ion-icon>
+      <ion-label>Page 2</ion-label>
+    </super-tab-button>
+    <super-tab-button>
+      <ion-icon name="list"></ion-icon>
+      <ion-label>3</ion-label>
+    </super-tab-button>
+    <super-tab-button>
+      <ion-icon name="person"></ion-icon>
+      <ion-label>My Profile</ion-label>
+    </super-tab-button>
+    <super-tab-button>
+      <ion-icon name="contacts"></ion-icon>
+      <ion-label>Contacts</ion-label>
+    </super-tab-button>
+  </super-tabs-toolbar>
 
-    <super-tabs-container>
-      <super-tab>This is home 1</super-tab>
-      <super-tab>
-        <ion-nav [root]="profilePage"></ion-nav>
-      </super-tab>
-      <super-tab>
-        <ion-nav [root]="contactsPage"></ion-nav>
-      </super-tab>
-    </super-tabs-container>
-  </super-tabs>
-</ion-content>
+  <super-tabs-container>
+    <super-tab>
+      <ion-content>
+        This is home 1
+      </ion-content>
+    </super-tab>
+    <super-tab>
+      <ion-content>
+        This is home 2
+      </ion-content>
+    </super-tab>
+    <super-tab>
+      <ion-content>
+        This is home 3
+      </ion-content>
+    </super-tab>
+    <super-tab>
+      <ion-nav [root]="profilePage"></ion-nav>
+    </super-tab>
+    <super-tab>
+      <ion-nav [root]="contactsPage"></ion-nav>
+    </super-tab>
+  </super-tabs-container>
+</super-tabs>
