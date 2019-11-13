@@ -19,19 +19,11 @@
     "@angular/platform-browser": "~8.1.2",
     "@angular/platform-browser-dynamic": "~8.1.2",
     "@angular/router": "~8.1.2",
-    "@ionic-native/core": "^5.0.0",
-    "@ionic-native/splash-screen": "^5.0.0",
-    "@ionic-native/status-bar": "^5.0.0",
-    "@ionic-super-tabs/angular": "^6.0.0",
-    "@ionic-super-tabs/core": "^6.0.0",
+    "@capacitor/android": "^1.3.0",
+    "@capacitor/core": "1.3.0",
+    "@ionic-super-tabs/angular": "^6.0.4",
+    "@ionic-super-tabs/core": "^6.0.4",
     "@ionic/angular": "^4.7.4",
-    "cordova-android": "7.1.4",
-    "cordova-plugin-device": "^2.0.2",
-    "cordova-plugin-ionic-keyboard": "^2.1.3",
-    "cordova-plugin-ionic-webview": "^3.1.2",
-    "cordova-plugin-splashscreen": "^5.0.2",
-    "cordova-plugin-statusbar": "^2.4.2",
-    "cordova-plugin-whitelist": "^1.3.3",
     "core-js": "^2.5.4",
     "rxjs": "~6.5.2",
     "tslib": "^1.9.0",
@@ -46,10 +38,11 @@
     "@angular/compiler": "~8.1.2",
     "@angular/compiler-cli": "~8.1.2",
     "@angular/language-service": "~8.1.2",
+    "@capacitor/cli": "1.3.0",
     "@ionic/angular-toolkit": "latest",
-    "@types/node": "~12.0.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~12.0.0",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
@@ -63,20 +56,5 @@
     "tslint": "~5.17.0",
     "typescript": "~3.4.3"
   },
-  "description": "Example project for the ionic-super-tabs library",
-  "cordova": {
-    "plugins": {
-      "cordova-plugin-whitelist": {},
-      "cordova-plugin-statusbar": {},
-      "cordova-plugin-device": {},
-      "cordova-plugin-splashscreen": {},
-      "cordova-plugin-ionic-webview": {
-        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
-      },
-      "cordova-plugin-ionic-keyboard": {}
-    },
-    "platforms": [
-      "android"
-    ]
-  }
+  "description": "Example project for the ionic-super-tabs library"
 }

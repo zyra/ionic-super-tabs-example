@@ -1,0 +1,98 @@
+.camera {
+  &-container {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8));
+    position: relative;
+  }
+}
+
+.buttons-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: linear-gradient(to top, transparentize(black, 0.6), transparentize(black, 1));
+  height: 150px;
+
+  .camera-button {
+    $size: 60px;
+    position: absolute;
+    left: calc(50% - #{$size / 2});
+    bottom: 50px;
+    width: $size;
+    height: $size;
+    border: 5px solid white;
+    border-radius: 50%;
+    --color: white;
+    transform: translate3d(0, 30px, 0) scale3d(0.8, 0.8, 1);
+    transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &.active-page {
+      transform: translate3d(0, 0, 0);
+
+      + .camera-button-companion {
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+      }
+    }
+
+
+    &-companion {
+      transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
+      $c-size: 30px;
+      position: absolute;
+      left: calc(50% + #{$c-size} + 15px);
+      bottom: 50px + ($size / 2) - ($c-size / 2);
+      width: $c-size;
+      height: $c-size;
+      border-radius: 50%;
+      --padding-start: 0;
+      --padding-end: 0;
+      --padding-top: 0;
+      --padding-bottom: 0;
+      --color: white;
+      transform: scale3d(0, 0, 0);
+      opacity: 0;
+
+      ion-icon {
+        fill: white;
+      }
+    }
+  }
+
+  .contacts-button, .story-button {
+    $size: 45px;
+    width: $size;
+    height: $size;
+    position: absolute;
+    bottom: 20px;
+    --border-radius: 50%;
+    --color: white;
+    --padding-start: 0;
+    --padding-end: 0;
+    --padding-top: 0;
+    --padding-bottom: 0;
+
+    ion-icon {
+      fill: var(--color);
+      transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+
+  .contacts-button {
+    left: 20px;
+
+    &.active-page {
+      --color: #ffda1e
+    }
+  }
+
+  .story-button {
+    right: 20px;
+    &.active-page {
+      --color: #ffda1e
+    }
+  }
+}

@@ -1,14 +1,12 @@
 <ion-header class="ion-no-border" no-border>
   <ion-toolbar color="primary" mode="ios">
-    <ion-buttons slot="start">
-      <ion-menu-button color="tertiary" autoHide="false"></ion-menu-button>
-    </ion-buttons>
-    <ion-title color="secondary">
+    <ion-title color="tertiary">
       Super Tabs
     </ion-title>
+    <preferences slot="end"></preferences>
   </ion-toolbar>
 </ion-header>
-<super-tabs activeTabIndex="1">
+<super-tabs activeTabIndex="1" [config]="{ debug: false, sideMenu: 'left', allowElementScroll: true }">
   <super-tabs-toolbar slot="top">
     <super-tab-button>
       <ion-icon name="star"></ion-icon>

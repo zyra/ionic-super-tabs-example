@@ -4,10 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { SuperTabsModule } from '@ionic-super-tabs/angular';
 import { IonicModule } from '@ionic/angular';
+import { PreferencesModule } from '../+components/preferences/preferences.module';
 import { ContactsPageModule } from '../contacts/contacts.module';
 import { ProfilePageModule } from '../profile/profile.module';
 
-import { HomePage, PreferencesPopover } from './home.page';
+import { HomePage } from './home.page';
 
 
 @NgModule({
@@ -24,9 +25,9 @@ import { HomePage, PreferencesPopover } from './home.page';
     ]),
     ContactsPageModule,
     ProfilePageModule,
+    PreferencesModule,
   ],
-  declarations: [HomePage, PreferencesPopover],
-  entryComponents: [PreferencesPopover],
+  declarations: [HomePage],
 })
 export class HomePageModule {
 }
