@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header no-border>
   <ion-toolbar color="primary">
     <ion-title mode="ios">Scrollable</ion-title>
     <preferences slot="end"></preferences>
@@ -7,7 +7,9 @@
 <super-tabs>
   <super-tabs-toolbar slot="top" scrollable>
     <super-tab-button *ngFor="let t of tabs">
-      <ion-label>{{ t.label }}</ion-label>
+      <ion-label>
+        {{ t.label }}
+      </ion-label>
     </super-tab-button>
   </super-tabs-toolbar>
   <super-tabs-container>

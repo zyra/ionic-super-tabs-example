@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { SuperTabs } from '@ionic-super-tabs/angular';
 import { SuperTabChangeEventDetail } from '@ionic-super-tabs/core';
 
 
@@ -8,14 +9,16 @@ import { SuperTabChangeEventDetail } from '@ionic-super-tabs/core';
   styleUrls: ['./full-screen.page.scss'],
 })
 export class FullScreenPage {
+  @ViewChild('superTabs', { static: false, read: SuperTabs }) st: SuperTabs;
 
   activeTabIndex: number;
-
-  constructor() {
-  }
 
   onTabChange(ev: CustomEvent<SuperTabChangeEventDetail>) {
     console.log('Tab change fired', ev);
     this.activeTabIndex = ev.detail.index;
+  }
+
+  selectTab(index: number) {
+    this.st.selectTab(index, true);
   }
 }
