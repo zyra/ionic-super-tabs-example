@@ -6,7 +6,7 @@
     <preferences slot="end"></preferences>
   </ion-toolbar>
 </ion-header>
-<super-tabs activeTabIndex="1" [config]="{ debug: false, sideMenu: 'left', allowElementScroll: true }">
+<super-tabs activeTabIndex="1" [config]="{ debug: true, sideMenu: 'left', allowElementScroll: true }">
   <super-tabs-toolbar slot="top">
     <super-tab-button>
       <ion-icon name="star"></ion-icon>
@@ -22,11 +22,16 @@
     </super-tab-button>
   </super-tabs-toolbar>
 
-  <super-tabs-container>
-    <super-tab>
-      <ion-content class="ion-padding">
-        This is home 1
-      </ion-content>
+  <super-tabs-container autoScrollTop>
+    <super-tab class="ion-padding">
+      <ion-card *ngFor="let i of [1,2,3,4,4,5,5,5,5]">
+        <ion-card-header>
+          <ion-card-title>Some card</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Some content
+        </ion-card-content>
+      </ion-card>
     </super-tab>
     <super-tab>
       <ion-nav [root]="contactsPage"></ion-nav>
