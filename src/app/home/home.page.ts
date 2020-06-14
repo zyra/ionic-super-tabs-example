@@ -1,7 +1,6 @@
-import { AfterViewInit, Component, Input, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { SuperTabs } from '@ionic-super-tabs/angular';
 import { SuperTabsConfig } from '@ionic-super-tabs/core';
-import { PopoverController } from '@ionic/angular';
 import { ContactsPage } from '../contacts/contacts.page';
 import { ProfilePage } from '../profile/profile.page';
 
@@ -13,7 +12,7 @@ import { ProfilePage } from '../profile/profile.page';
 })
 export class HomePage implements AfterViewInit {
 
-  @ViewChild(SuperTabs, { static: false }) superTabs: SuperTabs;
+  @ViewChild(SuperTabs) superTabs: SuperTabs;
 
   contactsPage = ContactsPage;
   profilePage = ProfilePage;
@@ -28,6 +27,8 @@ export class HomePage implements AfterViewInit {
     debug: true,
     allowElementScroll: false,
   };
+
+  tabs: any[] = [];
 
   ngAfterViewInit() {
     console.log('Super tabs', this.superTabs);

@@ -1,7 +1,7 @@
 <ion-toolbar style="position:fixed; top:0; left:0; --background: transparent;">
   <preferences slot="end"></preferences>
 </ion-toolbar>
-<super-tabs activeTabIndex="1" #superTabs (tabChange)="onTabChange($event)">
+<super-tabs activeTabIndex="1" #superTabs [config]="{nativeSmoothScroll: true}" (tabChange)="onTabChange($event)">
   <super-tabs-container>
     <super-tab>
       <ion-content class="contacts">

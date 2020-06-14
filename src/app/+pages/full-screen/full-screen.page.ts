@@ -9,7 +9,7 @@ import { SuperTabChangeEventDetail } from '@ionic-super-tabs/core';
   styleUrls: ['./full-screen.page.scss'],
 })
 export class FullScreenPage {
-  @ViewChild('superTabs', { static: false, read: SuperTabs }) st: SuperTabs;
+  @ViewChild('superTabs', { read: SuperTabs }) st: SuperTabs;
 
   activeTabIndex: number;
 
