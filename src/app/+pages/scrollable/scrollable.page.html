@@ -4,7 +4,7 @@
     <preferences slot="end"></preferences>
   </ion-toolbar>
 </ion-header>
-<super-tabs [config]="{ debug: true, nativeSmoothScroll: true }">
+<super-tabs [config]="{ lazyLoad: true, unloadWhenInvisible: true,  debug: true, nativeSmoothScroll: true }">
   <super-tabs-toolbar slot="top" scrollable>
     <super-tab-button *ngFor="let t of tabs">
       <ion-label>
